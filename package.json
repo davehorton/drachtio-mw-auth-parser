@@ -1,0 +1,38 @@
+{
+  "name": "drachtio-mw-auth-parser",
+  "version": "0.0.1",
+  "description": "drachtio middleware for parsing SIP Authorization header",
+  "main": "index.js",
+  "scripts": {
+    "test": "make"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davehorton/drachtio-mw-auth-parser.git"
+  },
+  "keywords": [
+    "sip",
+    "drachtio",
+    "auth"
+  ],
+  "author": "Dave Horton",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davehorton/drachtio-mw-auth-parser/issues"
+  },
+  "homepage": "https://github.com/davehorton/drachtio-mw-auth-parser#readme",
+  "dependencies": {
+    "extend": "^3.0.0"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-jshint": "~0.7.2",
+    "grunt-contrib-nodeunit": "*",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-jsdoc": "^1.0.0",
+    "jsdoc": ">=3.3.0-*",
+    "mocha": "~2.1.0",
+    "should": "~2.1.1"
+  }
+
+}
