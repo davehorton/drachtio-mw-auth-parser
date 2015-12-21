@@ -5,14 +5,14 @@ var parser = require('../../lib/parser') ;
 describe('authParser', function(){
   it('should parse a valid Digest Authorization header', function(){
     var hdrValue = 'username=\"103482\",realm=\"sip.drachtio.org\",nonce=\"df24fd41-4fc5-416f-b163-90f774ca0358\",' + 
-      'uri=\"sip:72.1.46.10:6060\",algorithm=MD5,response=\"a4881ad854cc0677158206ac9fa90e3b\",qop=auth,nc=00000032,cnonce=\"ea5cec20\"' ;
+      'uri=\"sip:75.1.46.10:6060\",algorithm=MD5,response=\"a4881ad854cc0677158206ac9fa90e3b\",qop=auth,nc=00000032,cnonce=\"ea5cec20\"' ;
 
     var auth = parser.digest( hdrValue ) ;
     auth.should.have.property('scheme','digest') ;
     auth.should.have.property('username','103482') ;
     auth.should.have.property('realm','sip.drachtio.org') ;
     auth.should.have.property('nonce','df24fd41-4fc5-416f-b163-90f774ca0358') ;
-    auth.should.have.property('uri','sip:72.1.46.10:6060') ;
+    auth.should.have.property('uri','sip:75.1.46.10:6060') ;
     auth.should.have.property('algorithm','MD5') ;
     auth.should.have.property('response','a4881ad854cc0677158206ac9fa90e3b') ;
     auth.should.have.property('qop','auth') ;
