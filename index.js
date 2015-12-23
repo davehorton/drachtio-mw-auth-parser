@@ -2,11 +2,14 @@
 
 var extend = require('extend') ;
 var parser = require('./lib/parser') ;
+var assert = require('assert') ;
 
 module.exports = function (req, res, next) {
+    assert(typeof req.authorization === 'undefined', 'drachtio-mw-auth-parser has been used twice') ;
+    
+    req.authorization = {};
     if (!req.has('authorization')) { return next(); }
 
-    req.authorization = {};
     req.username = 'anonymous';
 
     var authorization = req.get('authorization') ;
