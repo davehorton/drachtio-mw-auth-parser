@@ -4,16 +4,15 @@ drachtio middleware for parsing SIP Authorization header, supporting Digest and 
 ## Usage
 
 ```js
-var drachtio = require('drachtio');
-var app = drachtio() ;
-var authParser = require('drachtio-mw-auth-parser') ;
+const Srf = require('drachtio-srf');
+const srf = new Srf();
+const authParser = require('drachtio-mw-auth-parser') ;
 
+srf.connect({...}) ;
 
-app.connect({...}) ;
+srf.use(authParser) ;
 
-app.use( authParser ) ;
-
-app.register( function( req, res ){
+srf.register(( req, res ) => {
   console.log(req.authorization) ;
   /*
     Digest: username="103482",realm="sip.drachtio.org",nonce="df24fd41-4fc5-416f-b163-90f774ca0358" \
@@ -34,12 +33,5 @@ app.register( function( req, res ){
       cnonce: 'ea5cec20'
     }
    */
-  {
-    
 }) ;
-
-
-   */
-}) ;
-
 ```

@@ -1,10 +1,15 @@
 {
   "name": "drachtio-mw-auth-parser",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "drachtio middleware for parsing SIP Authorization header",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "make"
+    "test": "NODE_ENV=test node test/ | ./node_modules/.bin/tap-spec",
+    "coverage": "NODE_ENV=test ./node_modules/.bin/istanbul cover test/ --report html",
+    "jslint": "eslint lib"
+  },
+  "engines": {
+    "node": ">= 6.9.3"
   },
   "repository": {
     "type": "git",
@@ -21,18 +26,12 @@
     "url": "https://github.com/davehorton/drachtio-mw-auth-parser/issues"
   },
   "homepage": "https://github.com/davehorton/drachtio-mw-auth-parser#readme",
-  "dependencies": {
-    "extend": "^3.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "grunt": "~0.4.2",
-    "grunt-contrib-jshint": "~0.7.2",
-    "grunt-contrib-nodeunit": "*",
-    "grunt-contrib-watch": "~0.5.3",
-    "grunt-jsdoc": "^1.0.0",
-    "jsdoc": ">=3.3.0-*",
-    "mocha": "~2.1.0",
-    "should": "~2.1.1"
+    "blue-tape": "^1.0.0",
+    "istanbul": "^0.4.5",
+    "tap": "^11.1.4",
+    "tap-dot": "^1.0.5",
+    "tap-spec": "^4.1.1"
   }
-
 }
