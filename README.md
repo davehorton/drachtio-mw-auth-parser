@@ -1,4 +1,5 @@
-# drachtio-mw-auth-parser
+# drachtio-mw-auth-parser [![Build Status](https://secure.travis-ci.org/davehorton/drachtio-mw-auth-parser.png)](http://travis-ci.org/davehorton/drachtio-mw-auth-parser) [![NPM version](https://badge.fury.io/js/drachtio-mw-auth-parser.svg)](http://badge.fury.io/js/drachtio-mw-auth-parser)
+
 drachtio middleware for parsing SIP Authorization header, supporting Digest and Basic authorization
 
 ## Usage
